@@ -212,8 +212,8 @@
             { title: "Current Time", info: "11:40 AM." },
             { title: "Address of Origin", info: "23 Wood Creek Rd, Norfolk Historic District, CT 06058." },
             { title: "Address of Destination", info: "65 Ripley Hill Rd, Barkhamsted, CT 06063." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "16.45 miles." },
+            { title: "Estimated Time to Destination", info: "25 minutes." },
             { title: "State of Charge of Battery", info: "12% charge." },
             { title: "Range of Current Battery", info: "36 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "27 miles." },
@@ -231,10 +231,10 @@
                 name: 'Norfolk Town Hall',
 
                 location: '19 Maple Ave, Norfolk, CT 06058, United States',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '2.54',
+                originTime: '6',
+                destDistance: '14.16',
+                destTime: '21',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -270,10 +270,10 @@
                 name: 'Mary P Hinsdale School',
 
                 location: '15 Hinsdale Ave, Winsted, CT 06098',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '11.07',
+                originTime: '16',
+                destDistance: '5.87',
+                destTime: '11',
 
                 
                 waitTime: [
@@ -934,8 +934,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
